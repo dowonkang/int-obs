@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;int-obs&gt;</title>
+    <style>
+      :where(int-obs) {
+        display: block;
+      }
+
+      .spacer {
+        height: 50vh;
+      }
+    </style>
+    <script type="module" src="/src/int-obs.ts"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <h1>&lt;int-obs&gt;</h1>
+
+    <div class="spacer"></div>
+
+    <int-obs id="one">
+      <pre><code>&lt;int-obs&gt;&lt;/int-obs&gt;</code></pre>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs init="false">
+      <pre><code>&lt;int-obs init="false"&gt;&lt;/int-obs&gt;</code></pre>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs class="foo" class:in="in" class:out="out">
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs threshold="[0, 0.5, 1]">
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+
+    <int-obs>
+      <p>Hello World!</p>
+    </int-obs>
+
+    <div class="spacer"></div>
+  </body>
+</html>
