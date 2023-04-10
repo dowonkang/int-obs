@@ -3,6 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/int-obs.umd.cjs",
+  "module": "./dist/int-obs.js",
+  "exports": {
+    ".": {
+      "import": "./dist/int-obs.js",
+      "require": "./dist/int-obs.umd.cjs"
+    }
+  },
+  "types": "./types/int-obs.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -14,4 +26,3 @@
     "vite": "^4.2.0"
   }
 }
-

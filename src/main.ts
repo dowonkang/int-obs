@@ -1,6 +1,10 @@
 import "./style.css";
 import { IntObs } from "./int-obs";
 
+window.customElements.whenDefined("int-obs").then(() => {
+  console.log("int-obs is defined.");
+});
+
 document.addEventListener("intersectionchange", (event) => {
   console.group(event.type);
   console.log("target:", event.target);

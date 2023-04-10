@@ -232,5 +232,3 @@ declare global {
     "int-obs": IntObs;
   }
 }
-
-export default IntObs;
