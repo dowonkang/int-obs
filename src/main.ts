@@ -18,10 +18,18 @@ if (intObs) {
       });
     },
     {
-      rootMargin: "10% 0px 100px 0px",
+      rootMargin: "-10% 0px -100px 0px",
       threshold: [0, 0.25, 0.75, 1],
     }
   );
 
   intObs.initialize();
 }
+
+const manualCallbackElement = document.querySelector(
+  "#manualCallback"
+) as IntObs;
+
+manualCallbackElement.callback = (entry) => {
+  entry.target.innerHTML = `manually set callback: ${entry.isIntersecting}`;
+};

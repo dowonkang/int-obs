@@ -1,15 +1,49 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: sans-serif;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+:where(pre) {
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.spacer {
+  height: var(--h, 50vh);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.h-25 {
+  --h: 25vh;
+}
+
+.h-50 {
+  --h: 50vh;
+}
+
+.h-100 {
+  --h: 100vh;
+}
+
+.h-200 {
+  --h: 200vh;
+}
+
+.place-center {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  height: var(--h);
+}
+
+[intersecting] {
+  transition: all 0.5s linear;
+}
+
+[intersecting="true"] {
+  background: black;
+  color: white;
+}
+
+.no-overflow {
+  overflow: hidden;
 }
