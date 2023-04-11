@@ -1,6 +1,6 @@
-export class IntObs extends HTMLElement {
-  public static observers = new Map();
+const observers: Map<string, IntersectionObserver> = new Map();
 
+export class IntObs extends HTMLElement {
   public observer?: IntersectionObserver;
   public callback?: (entry: IntersectionObserverEntry) => void;
 
@@ -149,7 +149,7 @@ export class IntObs extends HTMLElement {
       const { options } = this;
       const key = JSON.stringify(options);
 
-      if (!IntObs.observers.has(key)) {
+      if (!observers.has(key)) {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             const { isIntersecting } = entry;
@@ -199,10 +199,10 @@ export class IntObs extends HTMLElement {
           });
         }, options);
 
-        IntObs.observers.set(key, observer);
+        observers.set(key, observer);
       }
 
-      this.observer = IntObs.observers.get(key);
+      this.observer = observers.get(key);
     }
 
     this.initialized = true;
